@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Vd-zE-XGw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Vd-zE-XGw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,22 +40,37 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zkh-C7-Ven" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="460" y="167"/>
+            <point key="canvasLocation" x="236" y="167"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rn3-eh-Lss">
             <objects>
-                <viewController id="bvG-DL-PzV" sceneMemberID="viewController">
+                <viewController id="bvG-DL-PzV" customClass="ViewController" customModule="BookFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tdd-4j-ggK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="how-Hi-m0t">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3EI-V5-0SV" firstAttribute="trailing" secondItem="how-Hi-m0t" secondAttribute="trailing" id="6re-Pd-9h1"/>
+                            <constraint firstItem="how-Hi-m0t" firstAttribute="leading" secondItem="3EI-V5-0SV" secondAttribute="leading" id="Bu6-KZ-yK8"/>
+                            <constraint firstItem="3EI-V5-0SV" firstAttribute="bottom" secondItem="how-Hi-m0t" secondAttribute="bottom" id="Te7-X0-NeA"/>
+                            <constraint firstItem="how-Hi-m0t" firstAttribute="top" secondItem="3EI-V5-0SV" secondAttribute="top" id="WiB-Sk-cKp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3EI-V5-0SV"/>
                     </view>
+                    <connections>
+                        <outlet property="myWebView" destination="how-Hi-m0t" id="VR7-aX-T4G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3N-jh-KWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1198" y="131"/>
+            <point key="canvasLocation" x="940" y="167"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ct7-sB-Dfp">
